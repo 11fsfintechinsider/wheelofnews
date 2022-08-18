@@ -1,6 +1,10 @@
 
 
-(function() {
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    console.log('Space pressed')
+  }
+})
 
 })();
 (function() {
@@ -8,11 +12,7 @@
   const startButton = document.querySelector('.button');
   let deg = 0;
 
-document.addEventListener('keyup', event => {
-  if (event.code === 'Space') {
-    console.log('Space pressed')
-  }
-}) 
+ startButton.addEventListener('click', () => {
     startButton.style.pointerEvents = 'none';
  
     deg = Math.floor(5000 + Math.random() * 5000);
