@@ -1,4 +1,3 @@
-
 (function() {
  // Code goes here
 })();
@@ -7,7 +6,9 @@
   const startButton = document.querySelector('.button');
   let deg = 0;
 
-  startButton.addEventListener('click', () => {
+  startButton.addEventListener('keyup',event => {
+if (event.code === 'space'){
+console.log('space pressed');
 
   startButton.style.pointerEvents = 'none';
 
