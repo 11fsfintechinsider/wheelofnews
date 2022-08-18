@@ -1,12 +1,7 @@
 
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
 
-document.addEventListener('keyup', event => {
-  if (event.code === 'Space') {
-    console.log('Space pressed')
-  }
-})
-
-})();
 (function() {
   const wheel = document.querySelector('.wheel');
   const startButton = document.querySelector('.button');
