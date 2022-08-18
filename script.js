@@ -1,6 +1,12 @@
 
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||      
+      e.keyCode == 32      
+  ) {
+
 (function() {
- // Code goes here
+
 })();
 (function() {
   const wheel = document.querySelector('.wheel');
