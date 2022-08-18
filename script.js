@@ -1,3 +1,4 @@
+
 (function() {
  // Code goes here
 })();
@@ -6,24 +7,23 @@
   const startButton = document.querySelector('.button');
   let deg = 0;
 
-  startButton.addEventListener('keyup',event => {
-if (event.code === 'space'){
-console.log('space pressed');
-
-  startButton.style.pointerEvents = 'none';
-
+  startButton.addEventListener('click', () => {
+ 
+    startButton.style.pointerEvents = 'none';
+ 
     deg = Math.floor(5000 + Math.random() * 5000);
+   
     wheel.style.transition = 'all 5s ease-out';
-  
+   
     wheel.style.transform = `rotate(${deg}deg)`;
-
+ 
     wheel.classList.add('blur');
   });
 
   wheel.addEventListener('transitionend', () => {
-  
-    wheel.classList.remove('blur');
 
+    wheel.classList.remove('blur');
+  
     startButton.style.pointerEvents = 'auto';
     wheel.style.transition = 'none';
     const actualDeg = deg % 360;
