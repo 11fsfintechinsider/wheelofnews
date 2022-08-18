@@ -1,9 +1,4 @@
 
-document.body.onkeyup = function(e) {
-  if (e.key == " " ||
-      e.code == "Space" ||      
-      e.keyCode == 32      
-  ) {
 
 (function() {
 
@@ -13,8 +8,11 @@ document.body.onkeyup = function(e) {
   const startButton = document.querySelector('.button');
   let deg = 0;
 
-  startButton.addEventListener('click', () => {
- 
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    console.log('Space pressed')
+  }
+}) 
     startButton.style.pointerEvents = 'none';
  
     deg = Math.floor(5000 + Math.random() * 5000);
